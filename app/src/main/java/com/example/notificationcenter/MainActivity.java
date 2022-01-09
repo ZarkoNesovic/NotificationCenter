@@ -15,6 +15,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -251,6 +252,37 @@ public class MainActivity extends AppCompatActivity {
 
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
         notificationManager.notify(1, notification);
+    }
+
+    public void sendOnChannel8(View v) {
+        final int progressMax = 100;
+
+        final NotificationCompat.Builder notification = new NotificationCompat.Builder(this, CHANNEL_1_ID)
+                .setSmallIcon(R.drawable.ic_baseline_add_24)
+                .setContentTitle("Download")
+                .setContentText("Download in progress")
+                .setPriority(NotificationCompat.PRIORITY_LOW)
+                .setOngoing(true)
+                .setOnlyAlertOnce(true)
+                .setProgress(progressMax, 0, true);
+
+        notificationManager.notify(2, notification.build());
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                SystemClock.sleep(2000);
+                for (int progress = 0; progress <= progressMax; progress += 20) {
+                    /*notification.setProgress(progressMax, progress, false);
+                    notificationManager.notify(2, notification.build());*/
+                    SystemClock.sleep(1000);
+                }
+                notification.setContentText("Download finished")
+                        .setProgress(0, 0, false)
+                        .setOngoing(false);
+                notificationManager.notify(2, notification.build());
+            }
+        }).start();
     }
 
 
