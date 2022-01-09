@@ -35,6 +35,21 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Send on channel 2"
+        android:text="Send on channel 4"
         android:onClick="sendOnChannel4"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send on channel 5"
+        android:onClick="sendOnChannel5"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send on channel 6"
+        android:onClick="sendOnChannel6"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send on channel 7"
+        android:onClick="sendOnChannel7"/>
 </LinearLayout>

@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <receiver android:name=".NotificationReciver"/>
+        <receiver android:name=".DirectReplyReceiver"/>
     </application>
 
 </manifest>
