@@ -22,39 +22,44 @@
         android:hint="Message"
          />
 
- <Button
+    <Button
      android:layout_width="match_parent"
      android:layout_height="wrap_content"
-     android:text="Send on channel 1"
-     android:onClick="sendOnChannel3"/>
+     android:text="@string/dugme1"
+     android:onClick="sendOnChannel1"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Send on channel 2"
+        android:text="@string/dugme2"
         android:onClick="sendOnChannel2"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Send on channel 4"
+        android:text="@string/dugme3"
+        android:onClick="sendOnChannel3"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dugme4"
         android:onClick="sendOnChannel4"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Send on channel 5"
+        android:text="@string/dugme5"
         android:onClick="sendOnChannel5"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Send on channel 6"
+        android:text="@string/dugme6"
         android:onClick="sendOnChannel6"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Send on channel 7"
+        android:text="@string/dugme7"
         android:onClick="sendOnChannel7"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Send on channel 8"
+        android:text="@string/dugme8"
         android:onClick="sendOnChannel8"/>
 </LinearLayout>

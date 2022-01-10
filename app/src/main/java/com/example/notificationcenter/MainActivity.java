@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.example.notificationcenter.App.CHANNEL_1_ID;
+import static com.example.notificationcenter.App.CHANNEL_2_ID;
 
 public class MainActivity extends AppCompatActivity {
     private NotificationManagerCompat notificationManager;
@@ -65,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         String title=TitleView.getText().toString();
         String message= MessageView.getText().toString();
 
-        Notification notification=new NotificationCompat.Builder(this,CHANNEL_1_ID)
+        Notification notification=new NotificationCompat.Builder(this,CHANNEL_2_ID)
                 .setSmallIcon(R.drawable.ic_baseline_airplanemode_active_24)
                 .setContentTitle(title)
                 .setContentText(message)
@@ -155,8 +156,8 @@ public class MainActivity extends AppCompatActivity {
                         .addLine("Ovo je linija 5")
                         .addLine("Ovo je linija 6")
                         .addLine("Ovo je linija 7")
-                        .setBigContentTitle("Big content title")
-                        .setSummaryText("Summary tex")
+                        .setBigContentTitle("Veliki naslov")
+                        .setSummaryText("Kratki text")
                 )
                 .setPriority(NotificationCompat.PRIORITY_LOW)
                 .setCategory(NotificationCompat.CATEGORY_MESSAGE)
@@ -203,7 +204,7 @@ public class MainActivity extends AppCompatActivity {
                 0, activityIntent, 0);
 
         RemoteInput remoteInput = new RemoteInput.Builder("key_text_reply")
-                .setLabel("Your answer...")
+                .setLabel("Odgovor ...")
                 .build();
 
         Intent replyIntent;
@@ -220,7 +221,7 @@ public class MainActivity extends AppCompatActivity {
 
         NotificationCompat.Action replyAction = new NotificationCompat.Action.Builder(
                 R.drawable.ic_baseline_add_24,
-                "Reply",
+                "Odgovori",
                 replyPendingIntent
         ).addRemoteInput(remoteInput).build();
 
@@ -260,7 +261,7 @@ public class MainActivity extends AppCompatActivity {
         final NotificationCompat.Builder notification = new NotificationCompat.Builder(this, CHANNEL_1_ID)
                 .setSmallIcon(R.drawable.ic_baseline_add_24)
                 .setContentTitle("Download")
-                .setContentText("Download in progress")
+                .setContentText("Download je u toku")
                 .setPriority(NotificationCompat.PRIORITY_LOW)
                 .setOngoing(true)
                 .setOnlyAlertOnce(true)

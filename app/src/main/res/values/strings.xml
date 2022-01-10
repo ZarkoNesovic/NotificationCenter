@@ -16,4 +16,17 @@ i mirisnim snegom osulo se voće;
 
     </string>
     <string name="DesankaMaksimovic">Desanka Maksimovic Ceznja</string>
+
+
+    //Tekstovi za dugmad u glavnoj aktivnosti
+    <string name="dugme1">Osnovna notifikacija kanal 1</string>
+    <string name="dugme2">Osnovna notifikacija kanal 2</string>
+    <string name="dugme3">Obavestenje sa dugmetom</string>
+    <string name="dugme4">BigTextStyle obavestenje</string>
+    <string name="dugme5">InboxStyle obavestenje</string>
+    <string name="dugme6">BigPictureStyle obavestenje</string>
+    <string name="dugme7">MessagingStyle obavestenje</string>
+    <string name="dugme8">Progress bar</string>
+
+
 </resources>
